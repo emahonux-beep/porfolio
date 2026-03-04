@@ -193,7 +193,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .about-hero{padding:100px var(--px);background:var(--lav-tint)}
 .about-hero h1{font-family:'Caveat',cursive;font-size:clamp(3rem,5vw,5rem);font-weight:700;margin-bottom:28px}
 .about-hero p{font-size:1.05rem;line-height:1.75;color:#4A4B5E;margin-bottom:16px;max-width:520px}
-.about-art{width:100%;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:linear-gradient(135deg,var(--lav) 0%,var(--pink) 60%,var(--sage) 100%);position:relative;display:flex;align-items:center;justify-content:center}
+.about-art{width:100%;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
 .about-art::before{content:'';position:absolute;width:70%;height:70%;border-radius:50%;background:rgba(255,255,255,0.2);top:-15%;right:-15%}
 .about-art::after{content:'';position:absolute;width:50%;height:50%;border-radius:50%;background:rgba(63,64,81,0.1);bottom:-10%;left:-5%}
 
@@ -254,7 +254,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .form-group input,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid rgba(63,64,81,0.15);border-radius:var(--r-sm);font-family:'Jost',sans-serif;font-size:0.95rem;background:#fff;color:var(--slate);outline:none;transition:border-color .2s}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--pink-text)}
 .form-group textarea{resize:vertical;min-height:140px}
-.contact-art{width:100%;aspect-ratio:4/5;border-radius:var(--r);background:linear-gradient(135deg,var(--sage) 0%,var(--lav) 50%,var(--pink) 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.contact-art{width:100%;aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .contact-art::before{content:'';position:absolute;width:80%;height:80%;border-radius:50%;background:rgba(255,255,255,0.15);top:-20%;right:-20%}
 
 /* ===================== PROJECT DETAIL ===================== */
@@ -820,7 +820,7 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
         <button class="btn btn-primary" onclick="showPage('projects')">See all projects →</button>
       </div>
       <div class="hero-art reveal">
-        <div class="hero-art-inner" style="background:linear-gradient(135deg,var(--pink) 0%,var(--lav) 50%,var(--sage) 100%);background-image:url('images/hero-illustration.png');background-size:cover;background-position:center top;">
+        <div class="hero-art-inner" style="background:none;background-image:url('images/hero-illustration.png');background-size:cover;background-position:center center;">
         </div>
       </div>
     </div>
@@ -1153,8 +1153,7 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
         <p>I studied Psychology and Information Science at USC, then earned my UX Design & Research certification from Flatiron School and a UI Design certification from Shift Nudge in 2025. That intersection of human behavior and information architecture is where I live — it's what makes me obsessive about clarity, hierarchy, and flow.</p>
         <p>When I'm not designing, I'm usually being supervised by my three cats: Gimli, Nala, and Stella. They have strong opinions about my work.</p>
       </div>
-      <div class="about-art reveal">
-        <span style="font-family:'DM Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;color:rgba(63,64,81,0.4);z-index:1">[ Portrait ]</span>
+      <div class="about-art reveal" style="background:none;background-image:url('images/about-illustration.png');background-size:cover;background-position:center center;">
       </div>
     </div>
   </section>
@@ -1407,8 +1406,7 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send message →</button>
         </form>
       </div>
-      <div class="contact-art reveal">
-        <span style="font-family:'DM Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;color:rgba(63,64,81,0.4);z-index:1">[ Illustration ]</span>
+      <div class="contact-art reveal" style="background:none;background-image:url('images/contact-illustration.png');background-size:cover;background-position:center center;">
       </div>
     </div>
   </section>
