@@ -1389,7 +1389,7 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
         <p style="font-size:0.95rem;line-height:1.7;color:rgba(63,64,81,0.65);margin-bottom:8px">Whether you have a project in mind, want to collaborate, or just want to connect — I'd love to hear from you. My inbox is always open.</p>
         <div class="contact-links">
           <a class="contact-link" href="mailto:emahonux@gmail.com">
-                        <span class="contact-link-icon"><i class="ph ph-envelope" style="font-size:1rem;color:var(--pink-text);"></i></span>
+            <span class="contact-link-icon"><i class="ph ph-envelope" style="font-size:1rem;color:var(--pink-text);"></i></span>
             emahonux@gmail.com
           </a>
           <a class="contact-link" href="tel:+12034820166">
@@ -1402,13 +1402,13 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
           <p style="display:none"><input name="bot-field" /></p>
           <div class="form-row">
             <div class="form-group"><label>First Name</label><input type="text" name="first-name" placeholder="Erin" required></div>
-            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Mahon"></div>
+            <div class="form-group"><label>Last Name</label><input type="text" name="last-name" placeholder="Mahon"></div>
           </div>
           <div class="form-row">
-            <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"></div>
-            <div class="form-group"><label>Phone</label><input type="tel" placeholder="(000) 000-0000"></div>
+            <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@example.com"></div>
+            <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="(000) 000-0000"></div>
           </div>
-          <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project..."></textarea></div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell me about your project..."></textarea></div>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send message →</button>
         </form>
       </div>
