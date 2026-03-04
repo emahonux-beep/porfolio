@@ -113,8 +113,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .hero-art-shapes{position:absolute;inset:0;overflow:hidden}
 .hero-illustration{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:110%;width:auto;object-fit:contain;object-position:bottom center}
 .hero-art-shapes::before,.hero-art-shapes::after{content:'';position:absolute;border-radius:50%}
-.hero-art-shapes::before{width:60%;height:60%;top:-10%;right:-10%;background:rgba(255,255,255,0.25)}
-.hero-art-shapes::after{width:40%;height:40%;bottom:-5%;left:10%;background:rgba(63,64,81,0.15)}
+.hero-art-shapes::before{display:none}
+.hero-art-shapes::after{display:none}
 .hero-art-label{font-family:'DM Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;color:rgba(63,64,81,0.5);z-index:1}
 
 /* WORK PREVIEW */
@@ -194,8 +194,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .about-hero h1{font-family:'Caveat',cursive;font-size:clamp(3rem,5vw,5rem);font-weight:700;margin-bottom:28px}
 .about-hero p{font-size:1.05rem;line-height:1.75;color:#4A4B5E;margin-bottom:16px;max-width:520px}
 .about-art{width:100%;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
-.about-art::before{content:'';position:absolute;width:70%;height:70%;border-radius:50%;background:rgba(255,255,255,0.2);top:-15%;right:-15%}
-.about-art::after{content:'';position:absolute;width:50%;height:50%;border-radius:50%;background:rgba(63,64,81,0.1);bottom:-10%;left:-5%}
+.about-art::before{display:none}
+.about-art::after{display:none}
 
 /* PHILOSOPHY */
 .philosophy{background:#fff;padding:100px var(--px)}
@@ -255,7 +255,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .form-group input:focus,.form-group textarea:focus{border-color:var(--pink-text)}
 .form-group textarea{resize:vertical;min-height:140px}
 .contact-art{width:100%;aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.contact-art::before{content:'';position:absolute;width:80%;height:80%;border-radius:50%;background:rgba(255,255,255,0.15);top:-20%;right:-20%}
+.contact-art::before{display:none}
 
 /* ===================== PROJECT DETAIL ===================== */
 #page-detail{background:#fff}
