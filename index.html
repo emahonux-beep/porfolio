@@ -770,6 +770,109 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
 @media(min-width:768px){
   #group-student .project-grid{grid-template-columns:repeat(3,1fr)}
 }
+/* ════════════════════════════════════════
+   BLOG STYLES
+════════════════════════════════════════ */
+.blog-hero{background:var(--cream);padding:72px var(--px) 64px}
+.blog-hero-inner{max-width:680px}
+.blog-hero-eyebrow{font-family:'DM Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--pink-text);margin-bottom:18px}
+.blog-hero-title{font-family:'Caveat',cursive;font-size:clamp(2.6rem,4.5vw,3.6rem);color:var(--slate);line-height:1.1;margin-bottom:20px}
+.blog-hero-title em{color:var(--pink-text);font-style:normal}
+.blog-hero-desc{font-size:1rem;font-weight:300;color:var(--slate);opacity:0.75;line-height:1.8;max-width:560px}
+.blog-toolbar{padding:18px var(--px);border-bottom:1px solid rgba(63,64,81,0.08);display:flex;align-items:center;gap:12px;background:#fff;position:sticky;top:64px;z-index:90}
+.search-wrap{position:relative;flex:1;max-width:400px}
+.search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:0.35;pointer-events:none}
+.search-input{width:100%;font-family:'Jost',sans-serif;font-size:0.875rem;font-weight:300;color:var(--slate);background:var(--cream);border:1.5px solid transparent;border-radius:var(--pill);padding:9px 16px 9px 40px;outline:none;transition:border-color .2s,background .2s}
+.search-input::placeholder{color:var(--slate);opacity:0.4}
+.search-input:focus{background:#fff;border-color:rgba(63,64,81,0.25)}
+.toolbar-divider{width:1px;height:24px;background:rgba(63,64,81,0.12);flex-shrink:0}
+.sort-wrap{position:relative;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sort-label{font-family:'DM Mono',monospace;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--slate);opacity:0.4;white-space:nowrap}
+.sort-select-wrap{position:relative}
+.sort-select{font-family:'DM Mono',monospace;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--slate);background:var(--cream);border:1.5px solid transparent;border-radius:var(--pill);padding:8px 32px 8px 14px;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;transition:border-color .2s,background .2s}
+.sort-select:focus,.sort-select:hover{background:#fff;border-color:rgba(63,64,81,0.25)}
+.sort-chevron{position:absolute;right:11px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:0.4}
+.toolbar-count{font-family:'DM Mono',monospace;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--slate);opacity:0.35;margin-left:auto;white-space:nowrap}
+.blog-grid-wrap{padding:52px var(--px) 96px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px}
+.post-card{border-radius:var(--r);overflow:hidden;border:1px solid rgba(63,64,81,0.1);background:#fff;display:flex;flex-direction:column;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.post-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(63,64,81,0.1)}
+.post-card.hidden{display:none}
+.post-card.featured{grid-column:1/-1;flex-direction:row;min-height:300px}
+.post-card.featured .card-thumb{width:42%;flex-shrink:0;height:auto;min-height:280px}
+.post-card.featured .card-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
+.post-card.featured .card-title{font-size:1.65rem}
+.post-card.featured .card-excerpt{-webkit-line-clamp:4;font-size:0.95rem}
+.featured-badge{position:absolute;top:16px;left:16px;font-family:'DM Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.12em;background:rgba(255,255,255,0.88);color:var(--slate);padding:4px 12px;border-radius:var(--pill)}
+.card-thumb{width:100%;height:200px;background:var(--cream);position:relative;overflow:hidden;flex-shrink:0}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .4s}
+.card-thumb img.loaded{opacity:1}
+.card-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card-date{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--slate);opacity:0.4;text-transform:uppercase;letter-spacing:0.1em}
+.card-title{font-family:'Caveat',cursive;font-size:1.25rem;color:var(--slate);line-height:1.2;transition:color .2s;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.post-card:hover .card-title{color:var(--pink-text)}
+.card-excerpt{font-size:0.85rem;font-weight:300;line-height:1.7;color:var(--slate);opacity:0.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-footer{margin-top:auto;padding-top:14px;border-top:1px solid rgba(63,64,81,0.07);display:flex;align-items:center;justify-content:space-between}
+.card-read{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--slate);opacity:0.4;text-transform:uppercase;letter-spacing:0.08em}
+.card-arrow{font-size:1rem;color:var(--pink-text);opacity:0.5;transition:transform .2s,opacity .2s}
+.post-card:hover .card-arrow{transform:translateX(4px);opacity:1}
+.blog-empty{display:none;padding:80px;text-align:center;grid-column:1/-1}
+.blog-empty.show{display:block}
+.blog-empty p{font-family:'Caveat',cursive;font-size:1.4rem;color:var(--slate);opacity:0.35}
+.tag-design{background:var(--pink-tint);color:var(--pink-text)}
+.tag-healthcare{background:var(--lav-tint);color:var(--lav-text)}
+.tag-mentoring{background:var(--sage-tint);color:var(--sage-text)}
+.tag-charleston{background:#E8EFD4;color:#3A5010}
+.post-header{background:var(--cream);padding:56px var(--px) 48px}
+.post-header-inner{max-width:740px}
+.post-back{font-family:'DM Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--slate);opacity:0.45;display:inline-flex;align-items:center;gap:6px;margin-bottom:28px;cursor:pointer;transition:opacity .2s;border:none;background:none;padding:0}
+.post-back:hover{opacity:1}
+.post-header-tags{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.post-header-title{font-family:'Caveat',cursive;font-size:clamp(2rem,4vw,3rem);color:var(--slate);line-height:1.15;margin-bottom:16px}
+.post-header-meta{display:flex;align-items:center;gap:6px}
+.post-header-meta .card-date,.post-header-meta .card-read{opacity:0.45}
+.post-header-meta .sep{opacity:0.3;font-size:0.75rem}
+.post-hero-image{width:100%;height:380px;overflow:hidden;background:var(--cream)}
+.post-hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+.post-content-wrap{max-width:700px;margin:0 auto;padding:60px var(--px)}
+.post-content-wrap h2{font-family:'Caveat',cursive;font-size:1.9rem;color:var(--slate);margin:48px 0 14px;line-height:1.2}
+.post-content-wrap h3{font-family:'Jost',sans-serif;font-weight:500;font-size:1rem;color:var(--slate);margin:28px 0 8px}
+.post-content-wrap p{font-size:1rem;font-weight:300;line-height:1.85;color:var(--slate);margin-bottom:20px}
+.post-content-wrap p strong{font-weight:500}
+.post-content-wrap ul{padding-left:20px;margin-bottom:20px}
+.post-content-wrap li{font-size:1rem;font-weight:300;line-height:1.8;color:var(--slate);margin-bottom:8px}
+.post-content-wrap blockquote{border-left:3px solid var(--pink);padding:14px 22px;margin:32px 0;background:var(--pink-tint);border-radius:0 var(--r-sm) var(--r-sm) 0}
+.post-content-wrap blockquote p{font-family:'Caveat',cursive;font-size:1.4rem;line-height:1.4;color:var(--pink-text);margin:0}
+.post-callout{background:var(--lav-tint);border-radius:var(--r-sm);padding:22px 26px;margin:32px 0}
+.post-callout .eyebrow{color:var(--lav-text);margin-bottom:8px}
+.post-callout p{font-size:0.88rem;line-height:1.7;margin:0;color:var(--lav-text)}
+.post-divider{border:none;border-top:1px solid rgba(63,64,81,0.09);margin:48px 0}
+.post-footer-section{background:var(--cream);padding:52px var(--px)}
+.post-footer-inner{max-width:700px;display:flex;flex-direction:column;gap:36px}
+.author-card{display:flex;gap:20px;align-items:flex-start;background:#fff;border-radius:var(--r);padding:28px;border:1px solid rgba(63,64,81,0.1)}
+.author-avatar-lg{width:48px;height:48px;background:var(--pink-text);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.author-avatar-lg span{font-family:'Caveat',cursive;color:#fff;font-size:1.3rem;line-height:1}
+.author-card-name{font-family:'Caveat',cursive;font-size:1.15rem;color:var(--slate);margin-bottom:4px}
+.author-card-bio{font-size:0.85rem;font-weight:300;line-height:1.7;color:var(--slate);opacity:0.7}
+.related-label{font-family:'DM Mono',monospace;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--lav-text);margin-bottom:12px}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.related-card{background:#fff;border-radius:var(--r-sm);border:1px solid rgba(63,64,81,0.1);padding:18px 20px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.related-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(63,64,81,0.08)}
+.related-card .tag{margin-bottom:10px;display:block}
+.related-card-title{font-family:'Caveat',cursive;font-size:1.05rem;color:var(--slate);line-height:1.25;transition:color .2s}
+.related-card:hover .related-card-title{color:var(--pink-text)}
+@media(max-width:960px){
+  .blog-grid{grid-template-columns:1fr 1fr}
+  .post-card.featured{flex-direction:column}
+  .post-card.featured .card-thumb{width:100%;height:220px;min-height:unset}
+  .related-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .blog-grid{grid-template-columns:1fr}
+  .blog-toolbar{flex-wrap:wrap}
+  .search-wrap{max-width:100%;width:100%}
+}
 </style>
   
 
@@ -795,6 +898,7 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
       <li><a onclick="showPage('projects')" id="nav-projects">Projects</a></li>
       <li><a onclick="showPage('about')" id="nav-about">About</a></li>
       <li><a onclick="showPage('process')" id="nav-process">Process</a></li>
+      <li><a onclick="showPage('blog')" id="nav-process">Blog</a></li>
       <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
@@ -810,6 +914,7 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
     <li><a onclick="showPage('projects');closeMobileNav()" id="mnav-projects">Projects</a></li>
     <li><a onclick="showPage('about');closeMobileNav()" id="mnav-about">About</a></li>
     <li><a onclick="showPage('process');closeMobileNav()" id="mnav-process">Process</a></li>
+        <li><a onclick="showPage('blog');closeMobileNav()" id="mnav-process">Blog</a></li>
     <li><a onclick="showPage('contact');closeMobileNav()" id="mnav-contact">Contact</a></li>
   </ul>
 </div>
@@ -1425,6 +1530,170 @@ footer{background:var(--cream);padding:80px var(--px) 40px;border-top:1px solid 
             <p style="color:rgba(63,64,81,0.65);font-size:0.95rem">Thanks for reaching out — I'll get back to you soon.</p>
           </div>
         </div>
+        <!-- ════════════════════════════════════════
+  PAGE: BLOG INDEX
+════════════════════════════════════════ -->
+<div id="page-blog" class="page">
+
+  <section class="blog-hero">
+    <div class="blog-hero-inner reveal">
+      <p class="blog-hero-eyebrow">Writing</p>
+      <h1 class="blog-hero-title">Thinking <em>out loud.</em></h1>
+      <p class="blog-hero-desc">Design observations, healthcare UX, mentoring notes, and dispatches from a very full life in Charleston.</p>
+    </div>
+  </section>
+
+  <div class="blog-toolbar">
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <circle cx="6" cy="6" r="4.5" stroke="#3F4051" stroke-width="1.5"/>
+        <line x1="9.5" y1="9.5" x2="13" y2="13" stroke="#3F4051" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input class="search-input" type="text" placeholder="Search posts..." id="search-input" oninput="applyToolbar()" autocomplete="off">
+    </div>
+    <div class="toolbar-divider"></div>
+    <div class="sort-wrap">
+      <span class="sort-label">Sort</span>
+      <div class="sort-select-wrap">
+        <select class="sort-select" id="sort-select" onchange="applyToolbar()">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="category">By category</option>
+        </select>
+        <svg class="sort-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none">
+          <path d="M1 1l4 4 4-4" stroke="#3F4051" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <span class="toolbar-count" id="toolbar-count"></span>
+  </div>
+
+  <div class="blog-grid-wrap">
+    <div class="blog-grid" id="blog-grid">
+
+      <article class="post-card featured reveal" data-category="design" data-id="config" onclick="showPost('config')">
+        <div class="card-thumb" style="position:relative">
+          <img src="https://raw.githubusercontent.com/emahonux-beep/porfolio/main/images/blog-config-2025.jpg" alt="Config 2025"
+            onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#F0D2D6,#E6B4BC)'"
+            onload="this.classList.add('loaded')">
+          <span class="featured-badge">Featured</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-design">Design</span><span class="card-date">March 2025</span></div>
+          <h2 class="card-title">My Config 2025 Hot Takes, Now Aged to Perfection</h2>
+          <p class="card-excerpt">I went to Config. I took notes. I had thoughts. Then I let them marinate so I could figure out what actually stuck versus what just felt exciting in the moment. Spoiler: the Severance production designer talk, the AI discourse finally maturing, and a few things I'm genuinely changing.</p>
+          <div class="card-footer"><span class="card-read">8 min read</span><span class="card-arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="post-card reveal" data-category="healthcare" data-id="healthcare" onclick="showPost('healthcare')">
+        <div class="card-thumb">
+          <img src="https://raw.githubusercontent.com/emahonux-beep/porfolio/main/images/blog-healthcare-stakes.jpg" alt="Healthcare UX"
+            onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#E6D2EC,#DABBE3)'"
+            onload="this.classList.add('loaded')">
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-healthcare">Healthcare</span><span class="card-date">Feb 2025</span></div>
+          <h2 class="card-title">Designing When the Stakes Are Actually High</h2>
+          <p class="card-excerpt">What it's really like to do UX in a healthcare context — where a confusing interface isn't just annoying, it can matter.</p>
+          <div class="card-footer"><span class="card-read">5 min read</span><span class="card-arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="post-card reveal" data-category="mentoring" data-id="mentoring-lesson" onclick="showPost('mentoring-lesson')">
+        <div class="card-thumb">
+          <img src="https://raw.githubusercontent.com/emahonux-beep/porfolio/main/images/blog-mentoring-lesson.jpg" alt="Mentoring lesson"
+            onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#D4DDAE,#C1CE88)'"
+            onload="this.classList.add('loaded')">
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-mentoring">Mentoring</span><span class="card-date">Jan 2025</span></div>
+          <h2 class="card-title">The Mentoring Lesson That Surprised Me Most</h2>
+          <p class="card-excerpt">I thought I was teaching. Turns out I was also learning. On what happens when you actually listen to early-career designers.</p>
+          <div class="card-footer"><span class="card-read">4 min read</span><span class="card-arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="post-card reveal" data-category="charleston" data-id="dog-walking" onclick="showPost('dog-walking')">
+        <div class="card-thumb">
+          <img src="https://raw.githubusercontent.com/emahonux-beep/porfolio/main/images/blog-dog-walking.jpg" alt="Dog walking Charleston"
+            onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#E8EFD4,#C1CE88)'"
+            onload="this.classList.add('loaded')">
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-charleston">Charleston life</span><span class="card-date">Dec 2024</span></div>
+          <h2 class="card-title">On Dog Walking as a Design Practice</h2>
+          <p class="card-excerpt">Walking other people's dogs around Charleston has taught me more about observation and flow than any workshop. No, really.</p>
+          <div class="card-footer"><span class="card-read">3 min read</span><span class="card-arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="post-card reveal" data-category="mentoring" data-id="mentoring-sister" onclick="showPost('mentoring-sister')">
+        <div class="card-thumb">
+          <img src="https://raw.githubusercontent.com/emahonux-beep/porfolio/main/images/blog-mentoring-sister.jpg" alt="Mentoring my sister"
+            onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#D4DDAE,#E6D2EC)'"
+            onload="this.classList.add('loaded')">
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag tag-mentoring">Mentoring</span><span class="card-date">Nov 2024</span></div>
+          <h2 class="card-title">In the Age of AI, How Do We Actually Educate New Designers?</h2>
+          <p class="card-excerpt">The Google cert is a starting point, not a destination. What happens when you take your sister through a real design education — and what it clarifies about the fundamentals that AI can't replace.</p>
+          <div class="card-footer"><span class="card-read">6 min read</span><span class="card-arrow">→</span></div>
+        </div>
+      </article>
+
+      <div class="blog-empty" id="blog-empty">
+        <p>Nothing here yet — check back soon.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer-blog"></div>
+</div>
+<!-- ════════════════════════════════════════
+  PAGE: SINGLE POST
+════════════════════════════════════════ -->
+<div id="page-post" class="page">
+
+  <section class="post-header">
+    <div class="post-header-inner">
+      <button class="post-back" onclick="showPage('blog')">← Back to writing</button>
+      <div class="post-header-tags" id="post-tags"></div>
+      <h1 class="post-header-title" id="post-title"></h1>
+      <div class="post-header-meta">
+        <span class="card-date" id="post-date"></span>
+        <span class="sep">·</span>
+        <span class="card-read" id="post-read"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="post-hero-image">
+    <img id="post-hero-img" src="" alt=""
+      onerror="this.parentElement.style.background='linear-gradient(135deg,#F0D2D6,#E6B4BC)';this.style.display='none'">
+  </div>
+
+  <div class="post-content-wrap" id="post-body"></div>
+
+  <section class="post-footer-section">
+    <div class="post-footer-inner">
+      <div class="author-card">
+        <div class="author-avatar-lg"><span>E</span></div>
+        <div>
+          <p class="author-card-name">Erin Mahon</p>
+          <p class="author-card-bio">Product designer working at the intersection of healthcare, civic tech, and everyday human experience. Writing about the parts of this job that are hard to put in a slide deck.</p>
+        </div>
+      </div>
+      <div>
+        <p class="related-label">More to read</p>
+        <div class="related-grid" id="related-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-post"></div>
+</div>
         <script>
           document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1755,7 +2024,7 @@ window.closeMobileNav=function(){
 function renderFooters(){
   var tpl=document.getElementById('footer-tpl');
   if(!tpl) return;
-  ['home','projects','about','contact','detail','process'].forEach(function(id){
+  ['home','projects','about','contact','detail','process','blog','post'].forEach(function(id){
     var el=document.getElementById('footer-'+id);
     if(el && !el.hasChildNodes()) el.appendChild(tpl.content.cloneNode(true));
   });
@@ -2172,6 +2441,93 @@ window.addEventListener('load',function(){
 });
 
 })();
+// ── BLOG ──────────────────────────────────────────────────────────────────
+var GH_BLOG = 'https://raw.githubusercontent.com/emahonux-beep/porfolio/main/images/';
+
+var blogPosts = {
+  config: {
+    title: 'My Config 2025 Hot Takes, Now Aged to Perfection',
+    tag: '<span class="tag tag-design">Design</span>',
+    date: 'March 2025', read: '8 min read',
+    image: GH_BLOG + 'blog-config-2025.jpg',
+    related: ['healthcare','mentoring-lesson'],
+    body: '<p>I went to Config. I took notes. I had <em>thoughts</em>. And then I sat on all of it for a few weeks before writing anything down.</p><p>What I wanted to avoid was the post-conference high. I wanted to know what actually stuck. Turns out: a lot.</p><h2>First, the things that made it special</h2><p>I got to meet over 15 of my teammates in person — people I had been working alongside remotely for months. We also got a tour of the Figma office, and then there were four product announcements, each genuinely surprising in different ways.</p><h2>AI is a tool. A very good one.</h2><p>The framing that resonated most: <strong>AI is genuinely powerful for boosting productivity and accelerating test-and-learn cycles.</strong> It won\'t replace the creative process, but it can help us generate more surface area — more ideas, more variations — so that the human judgment we bring has more to work with.</p><blockquote><p>AI gives you more clay. You still have to know what you\'re sculpting.</p></blockquote><h2>The Severance production designer</h2><p>One of the standout sessions featured the production designer behind Severance. The intentionality that goes into building a cinematic world maps surprisingly cleanly onto product design thinking. I left thinking about how I can be more deliberate about the emotional tone of the interfaces I design — not just their usability.</p><h2>Inga Hampton on creative chaos</h2><p>Her core message: design isn\'t always polished or perfectly organized. 1,000 unnamed layers. A flow state that takes 40 minutes to reach. All of it valid.</p><div class="post-callout"><p class="eyebrow">The thing I\'m taking back to my desk</p><p>I\'m going to stop apologizing for how my Figma files look mid-process. The messy version is where the thinking happens.</p></div><h2>Gabriel Valdivia on sharing before it\'s ready</h2><p>You don\'t have to work at a scrappy startup to adopt a scrappy mindset. I have a tendency to over-refine before I share. Communicable isn\'t the same as good, and sometimes the feedback you need can only come from the rough version.</p><h2>What I\'m actually changing</h2><ul><li>Earlier shares with stakeholders — rough framing, not polished decks</li><li>More explicit use of AI for ideation, earlier in the process</li><li>Letting my process be weird in private so it can be clean in public</li><li>Thinking harder about the emotional register of every interface</li></ul><hr class="post-divider"><p>I walked away from Config energized. Still am.</p>'
+  },
+  healthcare: {
+    title: 'Designing When the Stakes Are Actually High',
+    tag: '<span class="tag tag-healthcare">Healthcare</span>',
+    date: 'Feb 2025', read: '5 min read',
+    image: GH_BLOG + 'blog-healthcare-stakes.jpg',
+    related: ['config','mentoring-lesson'],
+    body: '<p>Most UX work has a comfortable margin for error. Healthcare is different. A confusing interface can mean a patient misses a medication. A provider documents the wrong dosage. A family member can\'t find the information they need at 2am.</p><h2>The cost of confusion is not abstract</h2><p>When I first moved into healthcare UX, I brought assumptions from consumer product work. <strong>Users are smart and adaptable.</strong> That\'s mostly true in low-stakes contexts. It is not true when someone is scared, exhausted, or navigating a system that was already confusing before you added a digital layer.</p><blockquote><p>Designing for people in their most vulnerable moments requires a different kind of care.</p></blockquote><h2>What actually changes in practice</h2><ul><li>Default to plain language — always, not just in the accessible version</li><li>Test with people who are tired, anxious, or distracted</li><li>Take error states as seriously as happy paths</li><li>Ask "what happens if this is wrong?" before "what\'s the best UX pattern here?"</li></ul><hr class="post-divider"><p>Working in healthcare made me a better designer everywhere — more careful, more specific, more honest about what "good enough" actually means.</p>'
+  },
+  'mentoring-lesson': {
+    title: 'The Mentoring Lesson That Surprised Me Most',
+    tag: '<span class="tag tag-mentoring">Mentoring</span>',
+    date: 'Jan 2025', read: '4 min read',
+    image: GH_BLOG + 'blog-mentoring-lesson.jpg',
+    related: ['mentoring-sister','config'],
+    body: '<p>I\'ve been mentoring early-career designers for a few years now. I went into it thinking the job was to share what I know and help people avoid the mistakes I made.</p><p>All of that turned out to be true. It also turned out to be about half the job.</p><h2>The part I didn\'t expect</h2><p>Early-career designers ask questions that senior designers stopped asking years ago. Not because the questions aren\'t important — because we\'ve calcified around our answers.</p><blockquote><p>When someone asks "why do we do it this way?" with genuine curiosity, the honest answer is sometimes "I\'m not sure anymore."</p></blockquote><div class="post-callout"><p class="eyebrow">A question that stopped me cold</p><p>A mentee once asked me why we always present three options to stakeholders. I had an answer ready. Then I actually thought about it. The answer I gave was shakier than I expected.</p></div><h2>What I\'ve started doing differently</h2><p>I now treat mentoring sessions as a form of research into my own assumptions. When I notice myself reaching for an automatic answer, I slow down and ask: is this actually true, or is it just how I learned to do it?</p>'
+  },
+  'dog-walking': {
+    title: 'On Dog Walking as a Design Practice',
+    tag: '<span class="tag tag-charleston">Charleston life</span>',
+    date: 'Dec 2024', read: '3 min read',
+    image: GH_BLOG + 'blog-dog-walking.jpg',
+    related: ['config','mentoring-sister'],
+    body: '<p>I started walking other people\'s dogs around Charleston about a year ago. It started as a way to get outside more. It became one of the most clarifying things I do for my design practice.</p><h2>Observation without agenda</h2><p>When you\'re walking a dog, you don\'t have a plan. You\'re following the dog\'s curiosity, not your own. You end up in parts of neighborhoods you\'d never have chosen, at a pace that\'s too slow to feel productive but too fast to be distracted.</p><p>You just... see things. The way a crosswalk is placed. The particular friction of a gate latch. Which benches face the sun and which ones nobody uses and why.</p><blockquote><p>A walk with a dog is a masterclass in noticing what people have stopped noticing.</p></blockquote><h2>Charleston, specifically</h2><p>This city is particularly good for this. The streets are old enough that the design decisions feel legible — you can see the intention behind them, and how well or poorly those intentions held up over time. Every design decision is a hypothesis. The city is one long longitudinal study.</p>'
+  },
+  'mentoring-sister': {
+    title: 'In the Age of AI, How Do We Actually Educate New Designers?',
+    tag: '<span class="tag tag-mentoring">Mentoring</span>',
+    date: 'Nov 2024', read: '6 min read',
+    image: GH_BLOG + 'blog-mentoring-sister.jpg',
+    related: ['mentoring-lesson','config'],
+    body: '<p>The most common first step someone takes when they want to break into UX is the Google UX Design Certificate. It\'s accessible and self-paced, and has helped a lot of people get oriented. But it\'s become a shorthand for "I started learning design," and we need to be honest about what that means and what it doesn\'t.</p><h2>How I got here</h2><p>My own path wasn\'t through a self-paced course. After graduating with a background in psychology and information science, I did a six-month intensive program: structured coursework, lectures, workshops, real projects with real clients, constant collaboration. Having actual professionals review your work and hold you to a standard is a different experience than moving through modules at your own pace.</p><h2>My sister\'s version of this story</h2><p>As my sister geared up to finish her psychology degree, we talked about what came next. We dug into what had actually stuck with her in school. The answer was research and how humans think. Sound familiar? We decided to find out if UX could be the right translation for her.</p><h2>The cert is the starting point, not the destination</h2><p>We started there because it makes sense to start there. But it\'s self-paced, which means you get out of it what you put in. There are no professionals reviewing your work. The feedback loop is thin.</p><blockquote><p>The Google cert gives you the map. It doesn\'t give you the mileage.</p></blockquote><p>So as she works through it, we talk. She tells me what she\'s learning and I ask questions. She doesn\'t always agree with my framing. I don\'t always explain things clearly. She tells me both things directly, because she\'s my sister and the professional veneer doesn\'t apply here.</p><h2>In the age of AI, fundamentals matter more, not less</h2><p>There\'s a temptation right now to skip the hard parts. AI tools can generate layouts, suggest components, produce copy. Someone new might think the technical fundamentals are less important than they used to be. I think that\'s exactly backwards.</p><p>Understanding <em>why</em> a layout works — responsive design, component architecture, variables, auto layout — gives you the judgment to evaluate what AI generates. Without that foundation, you\'re just accepting outputs you can\'t critique.</p><div class="post-callout"><p class="eyebrow">What we\'re building toward</p><p>The goal is to make her as well-rounded as possible — technically capable, research-grounded, able to communicate her thinking, comfortable receiving feedback.</p></div><hr class="post-divider"><p>Good design is mostly about asking the right questions in the right order. The hard part isn\'t learning the tools — it\'s learning which questions matter. That\'s what we\'re working on.</p>'
+  }
+};
+
+var blogCardDates = {config:202503,healthcare:202502,'mentoring-lesson':202501,'dog-walking':202412,'mentoring-sister':202411};
+var blogCardCats = {config:'design',healthcare:'healthcare','mentoring-lesson':'mentoring','dog-walking':'charleston','mentoring-sister':'mentoring'};
+
+window.showPost = function(id) {
+  var post = blogPosts[id];
+  if (!post) return;
+  document.getElementById('post-tags').innerHTML = post.tag;
+  document.getElementById('post-title').textContent = post.title;
+  document.getElementById('post-date').textContent = post.date;
+  document.getElementById('post-read').textContent = post.read;
+  document.getElementById('post-body').innerHTML = post.body;
+  var img = document.getElementById('post-hero-img');
+  img.src = post.image; img.alt = post.title; img.style.display='block';
+  img.parentElement.style.background='';
+  document.getElementById('related-grid').innerHTML = (post.related||[]).map(function(rid){
+    var r=blogPosts[rid]; if(!r) return '';
+    return '<div class="related-card" onclick="showPost(\''+rid+'\')">'+r.tag+'<p class="related-card-title">'+r.title+'</p></div>';
+  }).join('');
+  showPage('post');
+};
+
+window.applyToolbar = function() {
+  var q = ((document.getElementById('search-input')||{}).value||'').toLowerCase().trim();
+  var sort = (document.getElementById('sort-select')||{}).value||'newest';
+  var grid = document.getElementById('blog-grid'); if(!grid) return;
+  var cards = Array.from(grid.querySelectorAll('.post-card'));
+  var visible=0;
+  cards.forEach(function(c){
+    var show=!q||c.innerText.toLowerCase().includes(q);
+    c.classList.toggle('hidden',!show); if(show) visible++;
+  });
+  var sorted=cards.filter(function(c){return !c.classList.contains('hidden');});
+  if(sort==='newest') sorted.sort(function(a,b){return (blogCardDates[b.dataset.id]||0)-(blogCardDates[a.dataset.id]||0);});
+  else if(sort==='oldest') sorted.sort(function(a,b){return (blogCardDates[a.dataset.id]||0)-(blogCardDates[b.dataset.id]||0);});
+  else if(sort==='category') sorted.sort(function(a,b){return (blogCardCats[a.dataset.id]||'').localeCompare(blogCardCats[b.dataset.id]||'');});
+  var empty=document.getElementById('blog-empty');
+  sorted.forEach(function(c){grid.insertBefore(c,empty);});
+  var ct=document.getElementById('toolbar-count');
+  if(ct) ct.textContent=q?(visible+' result'+(visible!==1?'s':'')):'';
+  if(empty) empty.classList.toggle('show',visible===0);
+};
 </script>
 </body>
 </html>
